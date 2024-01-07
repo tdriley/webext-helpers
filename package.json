@@ -1,0 +1,19 @@
+{
+  "name": "webext-helpers",
+  "version": "0.0.1",
+  "description": "Cross-browser helper utility functions for MV3 web extensions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdriley/webext-helpers.git"
+  },
+  "author": "tdriley@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tdriley/webext-helpers/issues"
+  },
+  "homepage": "https://github.com/tdriley/webext-helpers#readme"
+}
