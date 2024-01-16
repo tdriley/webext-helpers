@@ -1,19 +1,42 @@
 {
   "name": "webext-helpers",
-  "version": "0.0.1",
-  "description": "Cross-browser helper utility functions for MV3 web extensions.",
-  "main": "index.js",
+  "version": "0.0.0",
+  "description": "Cross-browser helper utility functions for MV3 & MV2 web extensions.",
+  "keywords": [
+    "browser",
+    "extension",
+    "webextension",
+    "webext",
+    "web-ext",
+    "helpers",
+    "helper",
+    "utility",
+    "utilities",
+    "functions",
+    "manifest-v3",
+    "mv3"
+  ],
+  "type": "module",
+  "source": "src/index.js",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "parcel watch",
+    "build": "parcel build",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tdriley/webext-helpers.git"
   },
-  "author": "tdriley@gmail.com",
+  "author": "Tom Riley <tdriley@gmail.com> (https://tomriley.net/)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tdriley/webext-helpers/issues"
   },
-  "homepage": "https://github.com/tdriley/webext-helpers#readme"
+  "homepage": "https://github.com/tdriley/webext-helpers#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
 }
