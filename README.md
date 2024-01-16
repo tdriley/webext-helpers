@@ -8,9 +8,10 @@ First install as a project dependency:
 
 ## Functions
  - `setBrowserNamespace`
+
 Normalise the top-level web extension namespace as `browser`, so you can access `chrome.whatever.func()` as `browser.whatever.func()` in all browsers. Requires the `tabs` permission in `manifest.json`.
 
-```
+```javascript
     import { setBrowserNamespace } from "webext-helpers"
 
     setBrowserNamespace()
@@ -19,9 +20,10 @@ Normalise the top-level web extension namespace as `browser`, so you can access 
 ```
 
  - `getCurrentTab`
+
 Get the currently active tab in the current window. Requires the `tabs` permission in `manifest.json`.
 
-```
+```javascript
     import { getCurrentTab } from "webext-helpers"
 
     const activeTab = await getActiveTab()
@@ -30,9 +32,10 @@ Get the currently active tab in the current window. Requires the `tabs` permissi
 ```
 
  - `promback`
+
 Allows you to use `Promise` syntax with any web extension function (useful for browser differences in MV2 where Firefox expects promises and Chrome expects callbacks). You should provide the function ref and an array of arguments to call it with.
 
-```
+```javascript
     import { promback } from "webext-helpers"
 
     promback( browser.tabs.create, [{ url: 'https://github.com/tdriley/webext-helpers#readme' }]).then(data=> {
@@ -44,7 +47,7 @@ Allows you to use `Promise` syntax with any web extension function (useful for b
  - `goToTab`
 Check if there is a tab open in the current window with the provided URL. If not, open a new tab with the URL. Requires the `tabs` permission in `manifest.json`.
 
-```
+```javascript
     import { goToTab } from "webext-helpers"
 
     const result = await goToTab('https://github.com/tdriley/webext-helpers#readme')
