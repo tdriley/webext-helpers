@@ -35,4 +35,4 @@ export const goToTab = async (url)=> {
     }
 }
 
-setBrowserNamespace() 
+setBrowserNamespace()

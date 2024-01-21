@@ -16,7 +16,6 @@
     "manifest-v3",
     "mv3"
   ],
-  "type": "module",
   "source": "src/index.js",
   "main": "dist/main.js",
   "module": "dist/module.js",
