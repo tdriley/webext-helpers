@@ -1,7 +1,7 @@
 # webext-helpers
 Cross-browser helper utility functions for MV3 & MV2 web extensions.
 
-Please submit any issues or feature requests at [https://github.com/tdriley/webext-sync/issues](https://github.com/tdriley/webext-sync/issues)
+Please submit any issues or feature requests at [https://github.com/tdriley/webext-helpers/issues](https://github.com/tdriley/webext-helpers/issues)
 
 ## Usage
 First install as a project dependency: 
