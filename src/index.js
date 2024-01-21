@@ -9,12 +9,16 @@ export const getCurrentTab = async ()=> {
 
 // Accept a func that may expect a callback, or may return a promise, and always return a promise.
 export const promback = (func, args)=> {
-    return new Promise((resolve, reject)=> {
+    return new Promise((resolve, reject, )=> {
         // Call the func with this promise's resolve as the callback.
         const p = func(...args, resolve)
 
         // Func returned a promise, resolve this func's promise with the data.
-        typeof p.then==='function' && p.then(data=> resolve(data))
+        typeof p.then==='function' && p.then(
+            data=> resolve(data)
+        ).catch(
+            err=> reject(err)
+        )
     })
 }
 
