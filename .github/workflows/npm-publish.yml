@@ -22,26 +22,23 @@ jobs:
       - run: npm test
 
   publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      needs: build
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - uses: actions/setup-node@v3
+          with:
+            node-version: 16
+            registry-url: https://registry.npmjs.org/
+        - run: npm ci
+        - run: npm publish
+          env:
+            NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
   release-github:
+    needs: publish-npm
     runs-on: ubuntu-latest
-    steps:
-      - name: Create GitHub release
-        uses: Roang-zero1/github-create-release-action@v3
-        with:
-          version_regex: ^v[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
-          release_text: I'm still figuring out how to change this text in the automated release, have fun.
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: gh release create "$GITHUB_REF_NAME" # GITHUB_REF_NAME is the tag name in `on.push.tags` workflows
+      
