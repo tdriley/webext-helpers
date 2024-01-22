@@ -1,6 +1,6 @@
 {
   "name": "webext-helpers",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Cross-browser helper utility functions for MV3 & MV2 web extensions.",
   "keywords": [
     "browser",
