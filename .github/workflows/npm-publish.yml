@@ -42,5 +42,6 @@ jobs:
         uses: Roang-zero1/github-create-release-action@v3
         with:
           version_regex: ^v[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
+          release_text: I'm still figuring out how to change this text in the automated release, have fun.
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
