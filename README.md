@@ -11,7 +11,7 @@ First install as a project dependency:
 ## Functions
  - `setBrowserNamespace`
 
-Normalise the top-level web extension namespace as `browser`, so you can access `chrome.whatever.func()` as `browser.whatever.func()` in all browsers. Requires the `tabs` permission in `manifest.json`.
+Normalise the top-level web extension namespace as `browser`, so you can access `chrome.whatever.func()` as `browser.whatever.func()` in all browsers.
 
 ```javascript
     import { setBrowserNamespace } from "webext-helpers"
